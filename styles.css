@@ -1,6 +1,57 @@
 
 
 /* CSS VARIABLES */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
 :root{
     --red: #613A43;
     --tan: #837C6F;
@@ -30,12 +81,39 @@ header, main, footer{
     width: calc(1000px - 2rem);
     margin: 0 auto;
     background-color: var(--white);
+    
+}
+
+h1 {
+    font-family: var(--fonts);
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+}
+
+h2 {
+    font-family: var(--fonts);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+h3 {
+    font-family: var(--fonts);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
 }
 
 /* Shared header and footer styles */
 header, footer{
     text-align: center;
     background-color: var(--mint);
+    font-family: var(--fonts); 
 }
 
 /* Navigation Styles */
@@ -106,9 +184,14 @@ form{
     margin: 0 auto;
 }
 
+img {
+    display: block;
+    margin: 0 auto;
+}
 /* Input, Label, and textarea styles  */
 input, label, textarea{
     display: block;
+    
 }
 
 /* For the asterisks in the form section */
@@ -159,6 +242,8 @@ input[type=radio] {
     border-radius: 0;
 }
 
+
+
 input[type=radio] + label::before {
     content: "\00a0";   /* Non-breaking space */
     font-size: 2.75em;
@@ -172,6 +257,12 @@ input[type=radio] + label::before {
     border: 2px solid var(--red);   /* Push focus shadow away */
     background-color: var(--white);
     padding: 2px 1px 0 0;
+}
+
+fieldset {
+    border: 2px solid var(--red);
+    padding: .5rem;
+
 }
 
 input[type=radio]:checked + label::before {
