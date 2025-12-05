@@ -188,6 +188,11 @@ img {
     display: block;
     margin: 0 auto;
 }
+
+figcaption{
+    display: block;
+    padding-left: 2.5rem;
+}
 /* Input, Label, and textarea styles  */
 input, label, textarea{
     display: block;
